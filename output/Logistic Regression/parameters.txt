@@ -1,0 +1,13 @@
+|Training Data Evaluation:|
+
+Train Accuracy: 0.5017
+Train Precision: 0.5017
+Train Recall: 0.5017
+Train F1 Score: 0.5013
+
+|Test Data Evaluation:|
+
+Test Accuracy: 0.4962
+Test Precision: 0.4961
+Test Recall: 0.4962
+Test F1 Score: 0.4956
