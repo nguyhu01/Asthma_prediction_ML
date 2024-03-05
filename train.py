@@ -80,8 +80,8 @@ class SeverityClassificationPipeline:
         print("\n|Test Data Evaluation:|\n")
         self.evaluate_model(y_test, test_predictions, mode='test')  
 
-        print( "class 0:",len(test_predictions[test_predictions==0]))
-        print( "class 1:",len(test_predictions[test_predictions==1]))
+        print( "class 0 prediction:",len(test_predictions[test_predictions==0]))
+        print( "class 1 prediction:",len(test_predictions[test_predictions==1]))
 
         self.plot_metrics() 
 
@@ -114,8 +114,8 @@ class SeverityClassificationPipeline:
         print("\n|Test Data Evaluation:|\n")
         self.evaluate_model(y_test, test_predictions, mode='test')
 
-        print( "class 0:",len(test_predictions[test_predictions==0]))
-        print( "class 1:",len(test_predictions[test_predictions==1]))
+        print( "class 0 prediction:",len(test_predictions[test_predictions==0]))
+        print( "class 1 prediction:",len(test_predictions[test_predictions==1]))
 
         self.plot_metrics()
        

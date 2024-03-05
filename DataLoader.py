@@ -32,14 +32,7 @@ class DataLoader:
         # Extract the target column
         y = data.iloc[:, -1:].to_numpy()
         print("Unique values in target column are:", np.unique(y))
-        print(y[:5])
-        print("Class labels 0:", len(y[y == 0]))
-        print("Class labels 1:", len(y[y == 1]))
-
-        print(y[:50])
-        print("Shape of X is", X.shape)
-        print("Shape of y is", y.shape)
-
+        
         # Oversample class 1
         oversampler = RandomOverSampler(sampling_strategy='minority', random_state=self.random_state)
         X_resampled, y_resampled = oversampler.fit_resample(X, y)
@@ -82,8 +75,6 @@ class DataLoader:
 
         """
 
-        print("Test Class labels 0:", len(self.y_test[self.y_test == 0]))
-        print("Test Class labels 1:", len(self.y_test[self.y_test == 1]))
 
     def get_data(self):
         """
