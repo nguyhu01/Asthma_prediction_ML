@@ -1,14 +1,22 @@
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
+from sklearn.base import TransformerMixin
+from sklearn.preprocessing import FunctionTransformer
 
-class Preprocessor:
-    def __init__(self):
+class Preprocessor(TransformerMixin):
+    def __init__(self, use_scaler=True):
         """
         DataPreprocessor initialization.
+        :param use_scaler: bool, whether to use StandardScaler or not
         """
-        self.pipeline = Pipeline([
-            ('scaler', StandardScaler())
-        ])
+        if use_scaler:
+            self.pipeline = Pipeline([
+                ('scaler', StandardScaler())
+            ])
+        else:
+            self.pipeline = Pipeline([
+                ('passthrough', FunctionTransformer(lambda x: x))
+            ])
 
     def fit_transform(self, X):
         """
