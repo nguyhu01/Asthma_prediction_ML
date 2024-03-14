@@ -37,17 +37,11 @@ To use Asthma_prediction_ML, follow these steps:
 
 ```bash
 
-# Run the main script (this is a placeholder, replace with the actual command)
+# Run the main script 
 python run.py
-```
 
-## Running the Tests
-To run the tests, execute the following command:
-
-```bash
-
-# Execute tests (this is a placeholder, replace with the actual command)
-python -m unittest discover
+# To modify the parameters (optional)
+python run.py --test_size={value} --random_state={value} --lr={value} --max_depth={value}
 ```
 
 ## Built With
